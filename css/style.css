@@ -1,0 +1,112 @@
+/* General */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* La grille */
+#invader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 150px);
+  background: linear-gradient(45deg, #3c40c6, #6d57cf);
+}
+
+.line {
+  display: flex;
+}
+
+.pixel {
+  background-color: #0fbcf9;
+  border: 2px solid #34e7e4;
+  cursor: pointer;
+}
+
+/* Gris clair */
+.pixel--plain, .palette-color--plain {
+  background-color: #d2dae2;
+  border-color: #808e9b;
+}
+
+/* Gris foncé */
+.pixel--empty, .palette-color--empty {
+  background-color: #485460;
+  border-color: #1e272e;
+}
+
+/* Jaune-orangé */
+.pixel--light, .palette-color--light {
+  background-color: #ffc048;
+  border-color: #ffa801;
+}
+
+/* Vert */
+.pixel--highlight, .palette-color--highlight {
+  background-color: #0be881;
+  border-color: #05c46b;
+}
+
+/* Le formulaire de configuration */
+.configuration {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #272bad;
+}
+
+.configuration input {
+  padding: 1em;
+  border: none;
+  font-size: 1.2em;
+  width: 10em;
+  margin-right: 2px;
+}
+
+.configuration input:first-child {
+  border-radius: .5em 0 0 .5em;
+}
+
+.configuration button {
+  padding: 1em;
+  border: none;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #9957e4;
+  border-radius: 0 .5em .5em 0;
+}
+
+/* Palette */
+.palette {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  background:rgba(0, 0, 0, .2);
+  padding: .5em;
+}
+
+.palette-color {
+  margin: .5em;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.palette-color:hover {
+  transform: scale(1.1);
+}
+
+.palette-color--active,
+.palette-color--active:hover {
+  transform: scale(1.4);
+}
